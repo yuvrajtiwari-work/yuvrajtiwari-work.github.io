@@ -1,0 +1,68 @@
+import { Briefcase, Calendar } from "lucide-react";
+
+const ExperienceSection = () => {
+  const responsibilities = [
+    "Automated reports using Excel (PivotTables, slicers, graphs, macros) and PowerPoint, saving 10–15 hours/week for the analytics team.",
+    "Created and updated 10+ weekly, monthly, and ad-hoc reports on US healthcare data for two cancer drugs under Bayer oncology project.",
+    "Extracted and analyzed large datasets (TBs - 10 Million+ rows) from Snowflake using SQL.",
+    "Performed SKU-level EDA in Python to segment units and new consumers by region/territory, uncovering trends and insights.",
+    "Developed 10+ SOPs and quality documentation for monthly deliverables to ensure consistency and compliance.",
+    "Conducted market research analysis leveraging GenAI tools (ChatGPT, Copilot) for faster insights.",
+    "Designed visual reports for LTD (7+ years) data and YTD data with ad-hoc analysis support.",
+  ];
+
+  return (
+    <section id="experience" className="py-20 md:py-28 bg-card/30">
+      <div className="section-container">
+        <h2 className="section-title">
+          <span className="section-title-accent">Work</span> Experience
+        </h2>
+
+        <div className="max-w-4xl mx-auto">
+          <div className="card-portfolio relative">
+            {/* Company Header */}
+            <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-6">
+              <div>
+                <div className="flex items-center gap-2 mb-2">
+                  <Briefcase className="text-primary" size={20} />
+                  <h3 className="text-xl font-bold">Data Analyst</h3>
+                </div>
+                <p className="text-muted-foreground">PharmaACE Analytics, Hyderabad</p>
+              </div>
+              <div className="flex items-center gap-2 text-primary font-mono text-sm">
+                <Calendar size={16} />
+                <span>June 2024 – June 2025</span>
+              </div>
+            </div>
+
+            <div className="accent-line" />
+
+            {/* Responsibilities */}
+            <ul className="space-y-3 mt-6">
+              {responsibilities.map((item, index) => (
+                <li key={index} className="flex gap-3 text-sm text-muted-foreground">
+                  <span className="text-primary mt-1.5 flex-shrink-0">•</span>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+
+            {/* Tools Used */}
+            <div className="mt-8 pt-6 border-t border-border">
+              <p className="text-xs text-muted-foreground mb-3 uppercase tracking-wider">Tools & Technologies</p>
+              <div className="flex flex-wrap gap-2">
+                {["Python", "SQL", "Snowflake", "Excel", "PowerPoint", "GenAI Tools"].map((tool) => (
+                  <span key={tool} className="skill-tag text-xs">
+                    {tool}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default ExperienceSection;
