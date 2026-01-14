@@ -119,7 +119,7 @@ const ContactSection = () => {
                   <Linkedin size={18} />
                 </a>
                 <a
-                  href="https://github.com/yuvrajtiwari"
+                  href="https://github.com/yuvrajtiwari-work"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="social-icon"

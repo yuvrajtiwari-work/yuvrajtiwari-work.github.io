@@ -13,7 +13,7 @@ const projects = [
       "Integrated TMDB API for dynamic poster fetching with interactive Streamlit UI",
     ],
     tools: ["Python", "Pandas", "NumPy", "Scikit-learn", "Streamlit", "GitHub"],
-    github: "#",
+    github: "https://github.com/yuvrajtiwari-work",
   },
   {
     icon: Stethoscope,
@@ -27,7 +27,7 @@ const projects = [
       "Achieved 99% accuracy with comprehensive evaluation metrics",
     ],
     tools: ["Python", "TensorFlow", "Keras", "NumPy", "Matplotlib", "Google Colab"],
-    github: "#",
+    github: "https://github.com/yuvrajtiwari-work",
   },
 ];
 
