@@ -1,15 +1,19 @@
 import { ArrowDown, Download, Linkedin, Mail, Github } from "lucide-react";
+import aiBackground from "@/assets/ai-background.jpg";
 
 const HeroSection = () => {
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
-      {/* Background Elements */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_hsl(0_72%_51%_/_0.1)_0%,_transparent_50%)]" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_hsl(220_50%_30%_/_0.1)_0%,_transparent_50%)]" />
+      {/* Background Image */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${aiBackground})` }}
+      />
+      <div className="absolute inset-0 bg-background/70" />
       
       {/* Floating Elements */}
-      <div className="absolute top-1/4 right-1/4 w-64 h-64 bg-primary/5 rounded-full blur-3xl animate-float" />
-      <div className="absolute bottom-1/3 left-1/5 w-48 h-48 bg-primary/10 rounded-full blur-2xl animate-float" style={{ animationDelay: "1s" }} />
+      <div className="absolute top-1/4 right-1/4 w-64 h-64 bg-primary/10 rounded-full blur-3xl animate-float" />
+      <div className="absolute bottom-1/3 left-1/5 w-48 h-48 bg-primary/15 rounded-full blur-2xl animate-float" style={{ animationDelay: "1s" }} />
 
       <div className="section-container relative z-10">
         <div className="max-w-3xl mx-auto text-center">
