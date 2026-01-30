@@ -1,6 +1,9 @@
 import { Award, ExternalLink } from "lucide-react";
 import sqlBasicCert from "@/assets/sql-basic-certificate.jpg";
 import sqlIntermediateCert from "@/assets/sql-intermediate-certificate.jpg";
+import sqlAdvancedCert from "@/assets/sql-advanced-certificate.jpg";
+import pythonBasicCert from "@/assets/python-basic-certificate.jpg";
+import excelBasicsCert from "@/assets/excel-basics-certificate.jpg";
 
 const certifications = [
   {
@@ -19,6 +22,30 @@ const certifications = [
     link: "https://www.hackerrank.com/certificates/354064326ee0",
     image: sqlIntermediateCert,
   },
+  {
+    title: "SQL (Advanced)",
+    issuer: "HackerRank",
+    date: "26 Jan, 2026",
+    id: "B197F8AFBAF5",
+    link: "https://www.hackerrank.com/certificates/b197f8afbaf5",
+    image: sqlAdvancedCert,
+  },
+  {
+    title: "Python (Basic)",
+    issuer: "HackerRank",
+    date: "30 Jan, 2026",
+    id: "C371312ABC10",
+    link: "https://www.hackerrank.com/certificates/c371312abc10",
+    image: pythonBasicCert,
+  },
+  {
+    title: "Excel Basics for Data Analysis",
+    issuer: "IBM (Coursera)",
+    date: "25 Jan, 2026",
+    id: "9WD8A070ZYK4",
+    link: "https://coursera.org/verify/9WD8A070ZYK4",
+    image: excelBasicsCert,
+  },
 ];
 
 const CertificationsSection = () => {
@@ -29,7 +56,7 @@ const CertificationsSection = () => {
           <span className="section-title-accent">My</span> Certifications
         </h2>
 
-        <div className="grid md:grid-cols-2 gap-6 lg:gap-8 max-w-4xl mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 max-w-6xl mx-auto">
           {certifications.map((cert, index) => (
             <a
               key={index}
