@@ -4,6 +4,7 @@ import sqlIntermediateCert from "@/assets/sql-intermediate-certificate.jpg";
 import sqlAdvancedCert from "@/assets/sql-advanced-certificate.jpg";
 import pythonBasicCert from "@/assets/python-basic-certificate.jpg";
 import excelBasicsCert from "@/assets/excel-basics-certificate.jpg";
+import powerBiCert from "@/assets/power-bi-certificate.jpg";
 
 const certifications = [
   {
@@ -45,6 +46,14 @@ const certifications = [
     id: "9WD8A070ZYK4",
     link: "https://coursera.org/verify/9WD8A070ZYK4",
     image: excelBasicsCert,
+  },
+  {
+    title: "Data Analysis and Visualization with Power BI",
+    issuer: "Microsoft (Coursera)",
+    date: "01 Feb, 2026",
+    id: "YL1GSNM57SKQ",
+    link: "https://coursera.org/verify/YL1GSNM57SKQ",
+    image: powerBiCert,
   },
 ];
 

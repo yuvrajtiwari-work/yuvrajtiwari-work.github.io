@@ -19,6 +19,8 @@ const skillCategories = [
       "Dashboards",
       "Insights Generation",
       "SOP Writing",
+      "Power BI",
+      "Looker",
     ],
   },
   {
