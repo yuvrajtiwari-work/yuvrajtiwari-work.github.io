@@ -5,6 +5,9 @@ import sqlAdvancedCert from "@/assets/sql-advanced-certificate.jpg";
 import pythonBasicCert from "@/assets/python-basic-certificate.jpg";
 import excelBasicsCert from "@/assets/excel-basics-certificate.jpg";
 import powerBiCert from "@/assets/power-bi-certificate.jpg";
+import vertexAiCert from "@/assets/vertex-ai-studio-certificate.jpg";
+import lookerStudioCert from "@/assets/looker-studio-certificate.jpg";
+import mlopsVertexCert from "@/assets/mlops-vertex-ai-certificate.jpg";
 
 const certifications = [
   {
@@ -54,6 +57,30 @@ const certifications = [
     id: "YL1GSNM57SKQ",
     link: "https://coursera.org/verify/YL1GSNM57SKQ",
     image: powerBiCert,
+  },
+  {
+    title: "Introduction to Vertex AI Studio",
+    issuer: "Google Cloud (Coursera)",
+    date: "13 Feb, 2026",
+    id: "K9H11PGRQKL1",
+    link: "https://coursera.org/verify/K9H11PGRQKL1",
+    image: vertexAiCert,
+  },
+  {
+    title: "Looker Studio Essentials",
+    issuer: "Google Cloud (Coursera)",
+    date: "13 Feb, 2026",
+    id: "DMU64NT4HJTJ",
+    link: "https://coursera.org/verify/DMU64NT4HJTJ",
+    image: lookerStudioCert,
+  },
+  {
+    title: "MLOps with Vertex AI: Model Evaluation",
+    issuer: "Google Cloud (Coursera)",
+    date: "13 Feb, 2026",
+    id: "S6830P4ZCTYM",
+    link: "https://coursera.org/verify/S6830P4ZCTYM",
+    image: mlopsVertexCert,
   },
 ];
 
