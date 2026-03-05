@@ -1,4 +1,4 @@
-import { Award, ExternalLink } from "lucide-react";
+import { Award, ExternalLink, Trophy } from "lucide-react";
 import sqlBasicCert from "@/assets/sql-basic-certificate.jpg";
 import sqlIntermediateCert from "@/assets/sql-intermediate-certificate.jpg";
 import sqlAdvancedCert from "@/assets/sql-advanced-certificate.jpg";
@@ -8,8 +8,29 @@ import powerBiCert from "@/assets/power-bi-certificate.jpg";
 import vertexAiCert from "@/assets/vertex-ai-studio-certificate.jpg";
 import lookerStudioCert from "@/assets/looker-studio-certificate.jpg";
 import mlopsVertexCert from "@/assets/mlops-vertex-ai-certificate.jpg";
+import ibmDataAnalystCert from "@/assets/ibm-data-analyst-certificate.jpg";
+import ibmDataScienceCert from "@/assets/ibm-data-science-certificate.jpg";
 
-const certifications = [
+const professionalCertifications = [
+  {
+    title: "IBM Data Science Professional Certificate",
+    issuer: "IBM (Coursera)",
+    date: "05 Mar, 2026",
+    id: "2HSBR1ZANYXS",
+    link: "https://coursera.org/verify/professional-cert/2HSBR1ZANYXS",
+    image: ibmDataScienceCert,
+  },
+  {
+    title: "IBM Data Analyst Professional Certificate",
+    issuer: "IBM (Coursera)",
+    date: "26 Feb, 2026",
+    id: "H3PA2HREYELN",
+    link: "https://coursera.org/verify/professional-cert/H3PA2HREYELN",
+    image: ibmDataAnalystCert,
+  },
+];
+
+const otherCertifications = [
   {
     title: "SQL (Basic)",
     issuer: "HackerRank",
@@ -84,6 +105,53 @@ const certifications = [
   },
 ];
 
+interface CertCardProps {
+  cert: {
+    title: string;
+    issuer: string;
+    date: string;
+    id: string;
+    link: string;
+    image: string;
+  };
+}
+
+const CertCard = ({ cert }: CertCardProps) => (
+  <a
+    href={cert.link}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="card-portfolio group cursor-pointer"
+  >
+    <div className="relative overflow-hidden rounded-lg mb-4">
+      <img
+        src={cert.image}
+        alt={`${cert.title} Certificate`}
+        className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
+      />
+      <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end justify-center pb-4">
+        <span className="flex items-center gap-2 text-sm text-primary font-medium">
+          <ExternalLink size={16} />
+          View Certificate
+        </span>
+      </div>
+    </div>
+    <div className="flex items-start gap-3">
+      <div className="p-2 rounded-lg bg-primary/10">
+        <Award className="text-primary" size={20} />
+      </div>
+      <div>
+        <h3 className="font-bold group-hover:text-primary transition-colors">
+          {cert.title}
+        </h3>
+        <p className="text-sm text-muted-foreground">{cert.issuer}</p>
+        <p className="text-xs text-muted-foreground mt-1">Earned on: {cert.date}</p>
+        <p className="text-xs font-mono text-primary/70 mt-1">ID: {cert.id}</p>
+      </div>
+    </div>
+  </a>
+);
+
 const CertificationsSection = () => {
   return (
     <section id="certifications" className="py-20 md:py-28 bg-card/30">
@@ -92,50 +160,30 @@ const CertificationsSection = () => {
           <span className="section-title-accent">My</span> Certifications
         </h2>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 max-w-6xl mx-auto">
-          {certifications.map((cert, index) => (
-            <a
-              key={index}
-              href={cert.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="card-portfolio group cursor-pointer"
-            >
-              {/* Certificate Image */}
-              <div className="relative overflow-hidden rounded-lg mb-4">
-                <img
-                  src={cert.image}
-                  alt={`${cert.title} Certificate`}
-                  className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end justify-center pb-4">
-                  <span className="flex items-center gap-2 text-sm text-primary font-medium">
-                    <ExternalLink size={16} />
-                    View Certificate
-                  </span>
-                </div>
-              </div>
+        {/* Professional Certifications */}
+        <div className="mb-12">
+          <div className="flex items-center gap-3 mb-6">
+            <Trophy className="text-primary" size={22} />
+            <h3 className="text-lg font-bold">Professional Certifications</h3>
+          </div>
+          <div className="grid md:grid-cols-2 gap-6 lg:gap-8 max-w-4xl mx-auto">
+            {professionalCertifications.map((cert, index) => (
+              <CertCard key={index} cert={cert} />
+            ))}
+          </div>
+        </div>
 
-              {/* Certificate Info */}
-              <div className="flex items-start gap-3">
-                <div className="p-2 rounded-lg bg-primary/10">
-                  <Award className="text-primary" size={20} />
-                </div>
-                <div>
-                  <h3 className="font-bold group-hover:text-primary transition-colors">
-                    {cert.title}
-                  </h3>
-                  <p className="text-sm text-muted-foreground">{cert.issuer}</p>
-                  <p className="text-xs text-muted-foreground mt-1">
-                    Earned on: {cert.date}
-                  </p>
-                  <p className="text-xs font-mono text-primary/70 mt-1">
-                    ID: {cert.id}
-                  </p>
-                </div>
-              </div>
-            </a>
-          ))}
+        {/* Other Certifications */}
+        <div>
+          <div className="flex items-center gap-3 mb-6">
+            <Award className="text-primary" size={22} />
+            <h3 className="text-lg font-bold">Course Certifications</h3>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 max-w-6xl mx-auto">
+            {otherCertifications.map((cert, index) => (
+              <CertCard key={index} cert={cert} />
+            ))}
+          </div>
         </div>
       </div>
     </section>

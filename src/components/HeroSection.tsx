@@ -30,8 +30,8 @@ const HeroSection = () => {
           </h2>
           
           <p className="text-muted-foreground max-w-xl mx-auto mb-10 opacity-0 animate-fade-up stagger-3">
-            Transforming complex data into actionable insights. Experienced in analytics, 
-            reporting, and building intelligent solutions with Python, SQL, and ML.
+            Transforming complex data into actionable insights. IBM Certified Data Analyst 
+            & Data Science Professional | Python, SQL, Power BI | Analytics & ML
           </p>
 
           {/* CTA Buttons */}
