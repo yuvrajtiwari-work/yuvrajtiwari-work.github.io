@@ -41,7 +41,8 @@ const HeroSection = () => {
               Get In Touch
             </a>
             <a 
-              href="mailto:yuvrajtiwari.work@gmail.com" 
+              href="/Yuvraj_Resume_2026.pdf" 
+              download
               className="hero-btn hero-btn-outline"
             >
               <Download size={18} />

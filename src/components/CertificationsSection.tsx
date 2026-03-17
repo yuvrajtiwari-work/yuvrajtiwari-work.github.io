@@ -1,4 +1,4 @@
-import { Award, ExternalLink, Trophy } from "lucide-react";
+import { Award, ExternalLink, Trophy, BookOpen } from "lucide-react";
 import sqlBasicCert from "@/assets/sql-basic-certificate.jpg";
 import sqlIntermediateCert from "@/assets/sql-intermediate-certificate.jpg";
 import sqlAdvancedCert from "@/assets/sql-advanced-certificate.jpg";
@@ -10,6 +10,9 @@ import lookerStudioCert from "@/assets/looker-studio-certificate.jpg";
 import mlopsVertexCert from "@/assets/mlops-vertex-ai-certificate.jpg";
 import ibmDataAnalystCert from "@/assets/ibm-data-analyst-certificate.jpg";
 import ibmDataScienceCert from "@/assets/ibm-data-science-certificate.jpg";
+import kaggleDataCleaning from "@/assets/kaggle-data-cleaning.png";
+import kaggleIntroML from "@/assets/kaggle-intro-ml.png";
+import kagglePython from "@/assets/kaggle-python.png";
 
 const professionalCertifications = [
   {
