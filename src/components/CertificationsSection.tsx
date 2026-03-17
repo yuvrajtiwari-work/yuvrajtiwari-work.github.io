@@ -204,13 +204,26 @@ const CertificationsSection = () => {
         </div>
 
         {/* Other Certifications */}
-        <div>
+        <div className="mb-12">
           <div className="flex items-center gap-3 mb-6">
             <Award className="text-primary" size={22} />
             <h3 className="text-lg font-bold">Course Certifications</h3>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 max-w-6xl mx-auto">
             {otherCertifications.map((cert, index) => (
+              <CertCard key={index} cert={cert} />
+            ))}
+          </div>
+        </div>
+
+        {/* Kaggle Certifications */}
+        <div>
+          <div className="flex items-center gap-3 mb-6">
+            <BookOpen className="text-primary" size={22} />
+            <h3 className="text-lg font-bold">Kaggle Courses</h3>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 max-w-6xl mx-auto">
+            {kaggleCertifications.map((cert, index) => (
               <CertCard key={index} cert={cert} />
             ))}
           </div>
