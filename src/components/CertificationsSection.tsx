@@ -1,4 +1,4 @@
-import { Award, ExternalLink, Trophy } from "lucide-react";
+import { Award, ExternalLink, Trophy, BookOpen } from "lucide-react";
 import sqlBasicCert from "@/assets/sql-basic-certificate.jpg";
 import sqlIntermediateCert from "@/assets/sql-intermediate-certificate.jpg";
 import sqlAdvancedCert from "@/assets/sql-advanced-certificate.jpg";
@@ -10,6 +10,9 @@ import lookerStudioCert from "@/assets/looker-studio-certificate.jpg";
 import mlopsVertexCert from "@/assets/mlops-vertex-ai-certificate.jpg";
 import ibmDataAnalystCert from "@/assets/ibm-data-analyst-certificate.jpg";
 import ibmDataScienceCert from "@/assets/ibm-data-science-certificate.jpg";
+import kaggleDataCleaning from "@/assets/kaggle-data-cleaning.png";
+import kaggleIntroML from "@/assets/kaggle-intro-ml.png";
+import kagglePython from "@/assets/kaggle-python.png";
 
 const professionalCertifications = [
   {
@@ -105,6 +108,33 @@ const otherCertifications = [
   },
 ];
 
+const kaggleCertifications = [
+  {
+    title: "Data Cleaning",
+    issuer: "Kaggle",
+    date: "17 Mar, 2026",
+    id: "Kaggle",
+    link: "https://www.kaggle.com/learn/certification/yuvraj/data-cleaning",
+    image: kaggleDataCleaning,
+  },
+  {
+    title: "Intro to Machine Learning",
+    issuer: "Kaggle",
+    date: "13 Mar, 2026",
+    id: "Kaggle",
+    link: "https://www.kaggle.com/learn/certification/yuvraj/intro-to-machine-learning",
+    image: kaggleIntroML,
+  },
+  {
+    title: "Python",
+    issuer: "Kaggle",
+    date: "12 Mar, 2026",
+    id: "Kaggle",
+    link: "https://www.kaggle.com/learn/certification/yuvraj/python",
+    image: kagglePython,
+  },
+];
+
 interface CertCardProps {
   cert: {
     title: string;
@@ -174,13 +204,26 @@ const CertificationsSection = () => {
         </div>
 
         {/* Other Certifications */}
-        <div>
+        <div className="mb-12">
           <div className="flex items-center gap-3 mb-6">
             <Award className="text-primary" size={22} />
             <h3 className="text-lg font-bold">Course Certifications</h3>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 max-w-6xl mx-auto">
             {otherCertifications.map((cert, index) => (
+              <CertCard key={index} cert={cert} />
+            ))}
+          </div>
+        </div>
+
+        {/* Kaggle Certifications */}
+        <div>
+          <div className="flex items-center gap-3 mb-6">
+            <BookOpen className="text-primary" size={22} />
+            <h3 className="text-lg font-bold">Kaggle Courses</h3>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 max-w-6xl mx-auto">
+            {kaggleCertifications.map((cert, index) => (
               <CertCard key={index} cert={cert} />
             ))}
           </div>
