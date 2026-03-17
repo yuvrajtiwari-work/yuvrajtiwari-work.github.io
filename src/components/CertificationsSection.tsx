@@ -108,6 +108,33 @@ const otherCertifications = [
   },
 ];
 
+const kaggleCertifications = [
+  {
+    title: "Data Cleaning",
+    issuer: "Kaggle",
+    date: "17 Mar, 2026",
+    id: "Kaggle",
+    link: "https://www.kaggle.com/learn/certification/yuvraj/data-cleaning",
+    image: kaggleDataCleaning,
+  },
+  {
+    title: "Intro to Machine Learning",
+    issuer: "Kaggle",
+    date: "13 Mar, 2026",
+    id: "Kaggle",
+    link: "https://www.kaggle.com/learn/certification/yuvraj/intro-to-machine-learning",
+    image: kaggleIntroML,
+  },
+  {
+    title: "Python",
+    issuer: "Kaggle",
+    date: "12 Mar, 2026",
+    id: "Kaggle",
+    link: "https://www.kaggle.com/learn/certification/yuvraj/python",
+    image: kagglePython,
+  },
+];
+
 interface CertCardProps {
   cert: {
     title: string;
