@@ -7,7 +7,7 @@ const HeroSection = () => {
       {/* Background Image */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${aiBackground})` }}
+        style={{ backgroundImage: `url(${mlWordcloud})` }}
       />
       <div className="absolute inset-0 bg-background/70" />
       
