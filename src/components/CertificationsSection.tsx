@@ -1,8 +1,4 @@
 import { Award, ExternalLink, Trophy, BookOpen, Code, Terminal } from "lucide-react";
-import sqlBasicCert from "@/assets/sql-basic-certificate.jpg";
-import sqlIntermediateCert from "@/assets/sql-intermediate-certificate.jpg";
-import sqlAdvancedCert from "@/assets/sql-advanced-certificate.jpg";
-import pythonBasicCert from "@/assets/python-basic-certificate.jpg";
 import excelBasicsCert from "@/assets/excel-basics-certificate.jpg";
 import powerBiCert from "@/assets/power-bi-certificate.jpg";
 import vertexAiCert from "@/assets/vertex-ai-studio-certificate.jpg";
@@ -10,6 +6,10 @@ import lookerStudioCert from "@/assets/looker-studio-certificate.jpg";
 import mlopsVertexCert from "@/assets/mlops-vertex-ai-certificate.jpg";
 import ibmDataAnalystCert from "@/assets/ibm-data-analyst-certificate.jpg";
 import ibmDataScienceCert from "@/assets/ibm-data-science-certificate.jpg";
+import sqlBasicCert from "@/assets/sql-basic-certificate.jpg";
+import sqlIntermediateCert from "@/assets/sql-intermediate-certificate.jpg";
+import sqlAdvancedCert from "@/assets/sql-advanced-certificate.jpg";
+import pythonBasicCert from "@/assets/python-basic-certificate.jpg";
 import kaggleDataCleaning from "@/assets/kaggle-data-cleaning.png";
 import kaggleIntroML from "@/assets/kaggle-intro-ml.png";
 import kagglePython from "@/assets/kaggle-python.png";
@@ -38,39 +38,7 @@ const professionalCertifications = [
   },
 ];
 
-const otherCertifications = [
-  {
-    title: "SQL (Basic)",
-    issuer: "HackerRank",
-    date: "22 Jan, 2026",
-    id: "903428A4F64C",
-    link: "https://www.hackerrank.com/certificates/903428a4f64c",
-    image: sqlBasicCert,
-  },
-  {
-    title: "SQL (Intermediate)",
-    issuer: "HackerRank",
-    date: "24 Jan, 2026",
-    id: "354064326EE0",
-    link: "https://www.hackerrank.com/certificates/354064326ee0",
-    image: sqlIntermediateCert,
-  },
-  {
-    title: "SQL (Advanced)",
-    issuer: "HackerRank",
-    date: "26 Jan, 2026",
-    id: "B197F8AFBAF5",
-    link: "https://www.hackerrank.com/certificates/b197f8afbaf5",
-    image: sqlAdvancedCert,
-  },
-  {
-    title: "Python (Basic)",
-    issuer: "HackerRank",
-    date: "30 Jan, 2026",
-    id: "C371312ABC10",
-    link: "https://www.hackerrank.com/certificates/c371312abc10",
-    image: pythonBasicCert,
-  },
+const courseCertifications = [
   {
     title: "Excel Basics for Data Analysis",
     issuer: "IBM (Coursera)",
@@ -113,7 +81,42 @@ const otherCertifications = [
   },
 ];
 
-const kaggleCertifications = [
+const hackerrankCerts = [
+  {
+    title: "SQL (Basic)",
+    issuer: "HackerRank",
+    date: "22 Jan, 2026",
+    id: "903428A4F64C",
+    link: "https://www.hackerrank.com/certificates/903428a4f64c",
+    image: sqlBasicCert,
+  },
+  {
+    title: "SQL (Intermediate)",
+    issuer: "HackerRank",
+    date: "24 Jan, 2026",
+    id: "354064326EE0",
+    link: "https://www.hackerrank.com/certificates/354064326ee0",
+    image: sqlIntermediateCert,
+  },
+  {
+    title: "SQL (Advanced)",
+    issuer: "HackerRank",
+    date: "26 Jan, 2026",
+    id: "B197F8AFBAF5",
+    link: "https://www.hackerrank.com/certificates/b197f8afbaf5",
+    image: sqlAdvancedCert,
+  },
+  {
+    title: "Python (Basic)",
+    issuer: "HackerRank",
+    date: "30 Jan, 2026",
+    id: "C371312ABC10",
+    link: "https://www.hackerrank.com/certificates/c371312abc10",
+    image: pythonBasicCert,
+  },
+];
+
+const kaggleCerts = [
   {
     title: "Intro to Programming",
     issuer: "Kaggle",
@@ -227,24 +230,11 @@ const CertificationsSection = () => {
         {/* Course Certifications */}
         <div className="mb-12">
           <div className="flex items-center gap-3 mb-6">
-            <Award className="text-primary" size={22} />
+            <BookOpen className="text-primary" size={22} />
             <h3 className="text-lg font-bold">Course Certifications</h3>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 max-w-6xl mx-auto">
-            {otherCertifications.map((cert, index) => (
-              <CertCard key={index} cert={cert} />
-            ))}
-          </div>
-        </div>
-
-        {/* Kaggle Courses */}
-        <div className="mb-12">
-          <div className="flex items-center gap-3 mb-6">
-            <BookOpen className="text-primary" size={22} />
-            <h3 className="text-lg font-bold">Kaggle Courses</h3>
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 max-w-6xl mx-auto">
-            {kaggleCertifications.map((cert, index) => (
+            {courseCertifications.map((cert, index) => (
               <CertCard key={index} cert={cert} />
             ))}
           </div>
@@ -256,13 +246,14 @@ const CertificationsSection = () => {
             <Code className="text-primary" size={22} />
             <h3 className="text-lg font-bold">Platform Badges & Achievements</h3>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 max-w-6xl mx-auto">
-            {/* HackerRank */}
+
+          {/* HackerRank Badges Overview */}
+          <div className="mb-8">
             <a
               href="https://www.hackerrank.com/profile/yuvrajtiwari_wo1"
               target="_blank"
               rel="noopener noreferrer"
-              className="card-portfolio group cursor-pointer"
+              className="card-portfolio group cursor-pointer max-w-sm mx-auto block"
             >
               <div className="relative overflow-hidden rounded-lg mb-4 bg-background flex items-center justify-center p-4">
                 <img
@@ -280,12 +271,30 @@ const CertificationsSection = () => {
                     HackerRank Badges
                   </h3>
                   <p className="text-sm text-muted-foreground">SQL ⭐⭐⭐⭐⭐ · Python ⭐⭐</p>
-                  <p className="text-xs text-muted-foreground mt-1">5-Star SQL · 2-Star Python</p>
                 </div>
               </div>
             </a>
+          </div>
 
-            {/* LeetCode SQL 50 */}
+          {/* HackerRank Certs */}
+          <h4 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-4 ml-1">HackerRank Certifications</h4>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 max-w-6xl mx-auto mb-8">
+            {hackerrankCerts.map((cert, index) => (
+              <CertCard key={index} cert={cert} />
+            ))}
+          </div>
+
+          {/* Kaggle Certs */}
+          <h4 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-4 ml-1">Kaggle Courses</h4>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 max-w-6xl mx-auto mb-8">
+            {kaggleCerts.map((cert, index) => (
+              <CertCard key={index} cert={cert} />
+            ))}
+          </div>
+
+          {/* LeetCode Badges */}
+          <h4 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-4 ml-1">LeetCode Badges</h4>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 max-w-6xl mx-auto">
             <a
               href="https://leetcode.com/u/Yuvraj_Tiwari_Work/"
               target="_blank"
@@ -293,26 +302,18 @@ const CertificationsSection = () => {
               className="card-portfolio group cursor-pointer"
             >
               <div className="relative overflow-hidden rounded-lg mb-4">
-                <img
-                  src={leetcodeSql50}
-                  alt="LeetCode SQL 50 Badge"
-                  className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
-                />
+                <img src={leetcodeSql50} alt="LeetCode SQL 50 Badge" className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105" />
               </div>
               <div className="flex items-start gap-3">
                 <div className="p-2 rounded-lg bg-primary/10">
                   <Code className="text-primary" size={20} />
                 </div>
                 <div>
-                  <h3 className="font-bold group-hover:text-primary transition-colors">
-                    SQL 50
-                  </h3>
+                  <h3 className="font-bold group-hover:text-primary transition-colors">SQL 50</h3>
                   <p className="text-sm text-muted-foreground">LeetCode</p>
                 </div>
               </div>
             </a>
-
-            {/* LeetCode Introduction to Pandas */}
             <a
               href="https://leetcode.com/u/Yuvraj_Tiwari_Work/"
               target="_blank"
@@ -320,20 +321,14 @@ const CertificationsSection = () => {
               className="card-portfolio group cursor-pointer"
             >
               <div className="relative overflow-hidden rounded-lg mb-4">
-                <img
-                  src={leetcodePandas}
-                  alt="LeetCode Introduction to Pandas Badge"
-                  className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
-                />
+                <img src={leetcodePandas} alt="LeetCode Introduction to Pandas Badge" className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105" />
               </div>
               <div className="flex items-start gap-3">
                 <div className="p-2 rounded-lg bg-primary/10">
                   <Code className="text-primary" size={20} />
                 </div>
                 <div>
-                  <h3 className="font-bold group-hover:text-primary transition-colors">
-                    Introduction to Pandas
-                  </h3>
+                  <h3 className="font-bold group-hover:text-primary transition-colors">Introduction to Pandas</h3>
                   <p className="text-sm text-muted-foreground">LeetCode</p>
                 </div>
               </div>
