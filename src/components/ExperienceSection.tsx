@@ -19,6 +19,7 @@ const ExperienceSection = () => {
     {
       title: "Data Analyst",
       company: "PharmaACE Analytics, Hyderabad",
+      logo: pharmaaceLogo,
       period: "June 2024 – June 2025",
       responsibilities: [
         "Automated reports using Excel (PivotTables, slicers, graphs, macros) and PowerPoint, saving 10–15 hours/week for the analytics team.",
