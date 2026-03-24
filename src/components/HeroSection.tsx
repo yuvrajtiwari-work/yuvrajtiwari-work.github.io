@@ -90,7 +90,8 @@ const HeroSection = () => {
               </a>
             </div>
 
-            {/* Platform Links - Kaggle, HackerRank, LeetCode */}
+            {/* Platforms */}
+            <p className="text-xs font-mono text-muted-foreground mb-2 opacity-0 animate-fade-up stagger-5">Platforms</p>
             <div className="flex items-center gap-4 opacity-0 animate-fade-up stagger-5">
               <a
                 href="https://www.kaggle.com/yuvrajwork"
