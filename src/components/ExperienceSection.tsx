@@ -7,6 +7,7 @@ const ExperienceSection = () => {
     {
       title: "Data Analyst",
       company: "BestPeers, Indore",
+      logo: bestpeersLogo,
       period: "Feb 2026 – Present",
       responsibilities: [
         "Creating interactive dashboards in Power BI and Looker for data-driven decision making.",
