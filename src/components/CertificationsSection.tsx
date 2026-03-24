@@ -17,8 +17,8 @@ import kagglePandas from "@/assets/kaggle-pandas.png";
 import kaggleIntroProgramming from "@/assets/kaggle-intro-programming.png";
 import leetcodeSql50 from "@/assets/leetcode-sql50.png";
 import leetcodePandas from "@/assets/leetcode-pandas.png";
-import hackerrankBadges from "@/assets/hackerrank-badges.png";
-
+import hackerrankSqlBadge from "@/assets/hackerrank-sql-badge.png";
+import hackerrankPythonBadge from "@/assets/hackerrank-python-badge.png";
 const professionalCertifications = [
   {
     title: "IBM Data Science Professional Certificate",
@@ -247,35 +247,6 @@ const CertificationsSection = () => {
             <h3 className="text-lg font-bold">Platform Badges & Achievements</h3>
           </div>
 
-          {/* HackerRank Badges Overview */}
-          <div className="mb-8">
-            <a
-              href="https://www.hackerrank.com/profile/yuvrajtiwari_wo1"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="card-portfolio group cursor-pointer max-w-sm mx-auto block"
-            >
-              <div className="relative overflow-hidden rounded-lg mb-4 bg-background flex items-center justify-center p-4">
-                <img
-                  src={hackerrankBadges}
-                  alt="HackerRank Badges - Python 2 Star, SQL 5 Star"
-                  className="w-full max-w-[280px] h-auto object-contain transition-transform duration-300 group-hover:scale-105"
-                />
-              </div>
-              <div className="flex items-start gap-3">
-                <div className="p-2 rounded-lg bg-primary/10">
-                  <Terminal className="text-primary" size={20} />
-                </div>
-                <div>
-                  <h3 className="font-bold group-hover:text-primary transition-colors">
-                    HackerRank Badges
-                  </h3>
-                  <p className="text-sm text-muted-foreground">SQL ⭐⭐⭐⭐⭐ · Python ⭐⭐</p>
-                </div>
-              </div>
-            </a>
-          </div>
-
           {/* HackerRank Certs */}
           <h4 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-4 ml-1">HackerRank Certifications</h4>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 max-w-6xl mx-auto mb-8">
@@ -284,7 +255,7 @@ const CertificationsSection = () => {
             ))}
           </div>
 
-          {/* Kaggle Certs - List Style */}
+          {/* Kaggle Courses - Bullet list with image on right */}
           <h4 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-4 ml-1">Kaggle Courses</h4>
           <div className="max-w-4xl mx-auto mb-8 space-y-0 divide-y divide-border rounded-lg overflow-hidden border border-border">
             {kaggleCerts.map((cert, index) => (
@@ -295,65 +266,49 @@ const CertificationsSection = () => {
                 rel="noopener noreferrer"
                 className="flex items-center justify-between px-5 py-4 bg-card hover:bg-muted/50 transition-colors group"
               >
-                <div className="flex items-center gap-4">
-                  <img
-                    src={cert.image}
-                    alt={cert.title}
-                    className="w-12 h-12 rounded-lg object-cover"
-                  />
-                  <div>
-                    <h4 className="font-bold group-hover:text-primary transition-colors">{cert.title}</h4>
-                    <p className="text-sm text-muted-foreground">Congratulations, you did it! Your certificate is ready.</p>
-                  </div>
+                <div className="flex items-center gap-3">
+                  <span className="w-2 h-2 rounded-full bg-primary shrink-0" />
+                  <h4 className="font-bold group-hover:text-primary transition-colors">{cert.title}</h4>
                 </div>
-                <div className="flex items-center gap-2 text-primary font-medium text-sm shrink-0 ml-4">
-                  <Award size={16} />
-                  View Certificate
-                </div>
+                <img
+                  src={cert.image}
+                  alt={cert.title}
+                  className="w-12 h-12 rounded-lg object-cover shrink-0 ml-4"
+                />
               </a>
             ))}
           </div>
 
-          {/* LeetCode Badges */}
-          <h4 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-4 ml-1">LeetCode Badges</h4>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 max-w-6xl mx-auto">
-            <a
-              href="https://leetcode.com/u/Yuvraj_Tiwari_Work/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="card-portfolio group cursor-pointer"
-            >
-              <div className="relative overflow-hidden rounded-lg mb-4">
-                <img src={leetcodeSql50} alt="LeetCode SQL 50 Badge" className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105" />
+          {/* Badges Grid - 2 HackerRank + 2 LeetCode */}
+          <h4 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-4 ml-1">Badges</h4>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+            <a href="https://www.hackerrank.com/profile/yuvrajtiwari_wo1" target="_blank" rel="noopener noreferrer" className="card-portfolio group cursor-pointer flex flex-col items-center text-center">
+              <div className="w-32 h-32 overflow-hidden rounded-lg mb-3">
+                <img src={hackerrankSqlBadge} alt="HackerRank SQL Badge" className="w-full h-full object-contain transition-transform duration-300 group-hover:scale-105" />
               </div>
-              <div className="flex items-start gap-3">
-                <div className="p-2 rounded-lg bg-primary/10">
-                  <Code className="text-primary" size={20} />
-                </div>
-                <div>
-                  <h3 className="font-bold group-hover:text-primary transition-colors">SQL 50</h3>
-                  <p className="text-sm text-muted-foreground">LeetCode</p>
-                </div>
-              </div>
+              <h4 className="font-bold text-sm group-hover:text-primary transition-colors">SQL Gold Badge</h4>
+              <p className="text-xs text-muted-foreground">HackerRank · ⭐⭐⭐⭐⭐</p>
             </a>
-            <a
-              href="https://leetcode.com/u/Yuvraj_Tiwari_Work/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="card-portfolio group cursor-pointer"
-            >
-              <div className="relative overflow-hidden rounded-lg mb-4">
-                <img src={leetcodePandas} alt="LeetCode Introduction to Pandas Badge" className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105" />
+            <a href="https://www.hackerrank.com/profile/yuvrajtiwari_wo1" target="_blank" rel="noopener noreferrer" className="card-portfolio group cursor-pointer flex flex-col items-center text-center">
+              <div className="w-32 h-32 overflow-hidden rounded-lg mb-3">
+                <img src={hackerrankPythonBadge} alt="HackerRank Python Badge" className="w-full h-full object-contain transition-transform duration-300 group-hover:scale-105" />
               </div>
-              <div className="flex items-start gap-3">
-                <div className="p-2 rounded-lg bg-primary/10">
-                  <Code className="text-primary" size={20} />
-                </div>
-                <div>
-                  <h3 className="font-bold group-hover:text-primary transition-colors">Introduction to Pandas</h3>
-                  <p className="text-sm text-muted-foreground">LeetCode</p>
-                </div>
+              <h4 className="font-bold text-sm group-hover:text-primary transition-colors">Python Bronze Badge</h4>
+              <p className="text-xs text-muted-foreground">HackerRank · ⭐⭐</p>
+            </a>
+            <a href="https://leetcode.com/u/Yuvraj_Tiwari_Work/" target="_blank" rel="noopener noreferrer" className="card-portfolio group cursor-pointer flex flex-col items-center text-center">
+              <div className="w-32 h-32 overflow-hidden rounded-lg mb-3">
+                <img src={leetcodeSql50} alt="LeetCode SQL 50 Badge" className="w-full h-full object-contain transition-transform duration-300 group-hover:scale-105" />
               </div>
+              <h4 className="font-bold text-sm group-hover:text-primary transition-colors">SQL 50</h4>
+              <p className="text-xs text-muted-foreground">LeetCode</p>
+            </a>
+            <a href="https://leetcode.com/u/Yuvraj_Tiwari_Work/" target="_blank" rel="noopener noreferrer" className="card-portfolio group cursor-pointer flex flex-col items-center text-center">
+              <div className="w-32 h-32 overflow-hidden rounded-lg mb-3">
+                <img src={leetcodePandas} alt="LeetCode Pandas Badge" className="w-full h-full object-contain transition-transform duration-300 group-hover:scale-105" />
+              </div>
+              <h4 className="font-bold text-sm group-hover:text-primary transition-colors">Introduction to Pandas</h4>
+              <p className="text-xs text-muted-foreground">LeetCode</p>
             </a>
           </div>
         </div>
