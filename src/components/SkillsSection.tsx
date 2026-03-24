@@ -27,13 +27,16 @@ const skillCategories = [
     icon: Brain,
     title: "Machine Learning",
     skills: [
-      "Data Collection",
-      "Exploration",
       "Preprocessing",
       "Feature Engineering",
       "Model Selection",
-      "Training",
       "Evaluation",
+      "Linear Regression",
+      "Decision Tree",
+      "Random Forest",
+      "TensorFlow",
+      "Keras",
+      "Scikit-Learn",
     ],
   },
   {
@@ -71,7 +74,6 @@ const skillCategories = [
       "Conditional Formatting",
       "Data Validation",
       "Charts & Dashboards",
-      "Microsoft Office",
     ],
   },
   {

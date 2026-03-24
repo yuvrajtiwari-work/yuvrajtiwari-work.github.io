@@ -1,4 +1,6 @@
 import { User, Mail, Phone, MapPin, GraduationCap } from "lucide-react";
+import sgsitsLogo from "@/assets/sgsits-logo.png";
+import kvsLogo from "@/assets/kvs-logo.png";
 
 const AboutSection = () => {
   return (
@@ -55,15 +57,21 @@ const AboutSection = () => {
             </div>
             <div className="accent-line" />
             <div className="space-y-4">
-              <div>
-                <p className="text-primary text-xs font-mono mb-1">2020 - 2024</p>
-                <h4 className="font-medium text-sm">B.Tech in Information Technology</h4>
-                <p className="text-muted-foreground text-xs">SGSITS, Indore • GPA: 7.52/10</p>
+              <div className="flex items-start gap-3">
+                <img src={sgsitsLogo} alt="SGSITS" className="w-8 h-8 object-contain rounded shrink-0 mt-0.5" />
+                <div>
+                  <p className="text-primary text-xs font-mono mb-1">2020 - 2024</p>
+                  <h4 className="font-medium text-sm">B.Tech in Information Technology</h4>
+                  <p className="text-muted-foreground text-xs">SGSITS, Indore • GPA: 7.52/10</p>
+                </div>
               </div>
-              <div>
-                <p className="text-primary text-xs font-mono mb-1">2018 - 2020</p>
-                <h4 className="font-medium text-sm">Senior High School (PCM)</h4>
-                <p className="text-muted-foreground text-xs">KV No.1, Indore • 93.4%</p>
+              <div className="flex items-start gap-3">
+                <img src={kvsLogo} alt="KV" className="w-8 h-8 object-contain rounded shrink-0 mt-0.5" />
+                <div>
+                  <p className="text-primary text-xs font-mono mb-1">2018 - 2020</p>
+                  <h4 className="font-medium text-sm">Senior High School (PCM)</h4>
+                  <p className="text-muted-foreground text-xs">KV No.1, Indore • 93.4%</p>
+                </div>
               </div>
             </div>
           </div>

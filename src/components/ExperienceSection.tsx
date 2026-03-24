@@ -1,10 +1,13 @@
 import { Briefcase, Calendar } from "lucide-react";
+import pharmaaceLogo from "@/assets/pharmaace-logo.png";
+import bestpeersLogo from "@/assets/bestpeers-logo.png";
 
 const ExperienceSection = () => {
   const experiences = [
     {
       title: "Data Analyst",
       company: "BestPeers, Indore",
+      logo: bestpeersLogo,
       period: "Feb 2026 – Present",
       responsibilities: [
         "Creating interactive dashboards in Power BI and Looker for data-driven decision making.",
@@ -16,6 +19,7 @@ const ExperienceSection = () => {
     {
       title: "Data Analyst",
       company: "PharmaACE Analytics, Hyderabad",
+      logo: pharmaaceLogo,
       period: "June 2024 – June 2025",
       responsibilities: [
         "Automated reports using Excel (PivotTables, slicers, graphs, macros) and PowerPoint, saving 10–15 hours/week for the analytics team.",
@@ -42,12 +46,17 @@ const ExperienceSection = () => {
             <div key={expIndex} className="card-portfolio relative">
               {/* Company Header */}
               <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-6">
-                <div>
-                  <div className="flex items-center gap-2 mb-2">
-                    <Briefcase className="text-primary" size={20} />
-                    <h3 className="text-xl font-bold">{exp.title}</h3>
+                <div className="flex items-center gap-4">
+                  {exp.logo && (
+                    <img src={exp.logo} alt={exp.company} className="w-10 h-10 object-contain rounded" />
+                  )}
+                  <div>
+                    <div className="flex items-center gap-2 mb-1">
+                      <Briefcase className="text-primary" size={18} />
+                      <h3 className="text-xl font-bold">{exp.title}</h3>
+                    </div>
+                    <p className="text-muted-foreground">{exp.company}</p>
                   </div>
-                  <p className="text-muted-foreground">{exp.company}</p>
                 </div>
                 <div className="flex items-center gap-2 text-primary font-mono text-sm">
                   <Calendar size={16} />
