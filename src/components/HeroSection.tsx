@@ -40,33 +40,12 @@ const HeroSection = () => {
               Yuvraj <span className="text-gradient">Tiwari</span>
             </h1>
             
-            <h2 className="text-lg md:text-xl text-muted-foreground mb-6 opacity-0 animate-fade-up stagger-2">
-              Data Analyst & ML Engineer
+            <h2 className="text-sm md:text-base text-muted-foreground mb-6 opacity-0 animate-fade-up stagger-2">
+              Data Analyst | Aspiring Machine Learning & MLOps Engineer | Python • SQL • Snowflake • Power BI | B.Tech IT '24 | IBM Certified Data Analyst & Data Science Professional
             </h2>
-            
-            <p className="text-muted-foreground text-sm md:text-base max-w-lg mb-8 opacity-0 animate-fade-up stagger-3">
-              Transforming complex data into actionable insights. IBM Certified Data Analyst 
-              & Data Science Professional | Python, SQL, Power BI | Analytics & ML
-            </p>
 
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row items-start gap-4 mb-8 opacity-0 animate-fade-up stagger-4">
-              <a href="#contact" className="hero-btn hero-btn-primary">
-                <Mail size={18} />
-                Get In Touch
-              </a>
-              <a 
-                href="/Yuvraj_Resume_2026.pdf" 
-                download
-                className="hero-btn hero-btn-outline"
-              >
-                <Download size={18} />
-                Download CV
-              </a>
-            </div>
-
-            {/* Social Links */}
-            <div className="flex items-center gap-4 opacity-0 animate-fade-up stagger-5">
+            {/* Social Links - LinkedIn, Mail, GitHub */}
+            <div className="flex items-center gap-4 mb-6 opacity-0 animate-fade-up stagger-3">
               <a
                 href="https://linkedin.com/in/yuvraj-tiwari-31ba1739a"
                 target="_blank"
@@ -92,6 +71,26 @@ const HeroSection = () => {
               >
                 <Github size={20} />
               </a>
+            </div>
+
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row items-start gap-4 mb-6 opacity-0 animate-fade-up stagger-4">
+              <a href="#contact" className="hero-btn hero-btn-primary">
+                <Mail size={18} />
+                Get In Touch
+              </a>
+              <a 
+                href="/Yuvraj_Resume_2026.pdf" 
+                download
+                className="hero-btn hero-btn-outline"
+              >
+                <Download size={18} />
+                Download CV
+              </a>
+            </div>
+
+            {/* Platform Links - Kaggle, HackerRank, LeetCode */}
+            <div className="flex items-center gap-4 opacity-0 animate-fade-up stagger-5">
               <a
                 href="https://www.kaggle.com/yuvrajwork"
                 target="_blank"
