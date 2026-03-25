@@ -1,5 +1,5 @@
 import { ArrowDown, Download, Linkedin, Mail, Github } from "lucide-react";
-import mlWordcloud from "@/assets/ml-wordcloud-bg.jpg";
+import mlWordcloud from "@/assets/ml-wordcloud-bg.png";
 
 const KaggleIcon = ({ size = 20 }: { size?: number }) => (
   <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="currentColor">
