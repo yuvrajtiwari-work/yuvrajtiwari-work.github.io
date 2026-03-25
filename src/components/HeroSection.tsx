@@ -44,32 +44,35 @@ const HeroSection = () => {
               Data Analyst | Aspiring Machine Learning & MLOps Engineer | Python • SQL • Snowflake • Power BI | B.Tech IT '24 | IBM Certified Data Analyst & Data Science Professional
             </h2>
 
-            {/* Socials */}
-            <p className="text-xs font-mono text-muted-foreground mb-2 opacity-0 animate-fade-up stagger-3">Socials</p>
-            <div className="flex items-center gap-4 mb-4 opacity-0 animate-fade-up stagger-3">
-              <a href="https://linkedin.com/in/yuvraj-tiwari-31ba1739a" target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="LinkedIn"><Linkedin size={20} /></a>
-              <a href="mailto:yuvrajtiwari.work@gmail.com" className="social-icon" aria-label="Email"><Mail size={20} /></a>
-              <a href="https://github.com/yuvrajtiwari-work" target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="GitHub"><Github size={20} /></a>
-            </div>
+            {/* Socials & Platforms side by side with CTA buttons */}
+            <div className="flex flex-col sm:flex-row items-start gap-6 opacity-0 animate-fade-up stagger-3">
+              {/* Socials + Get In Touch */}
+              <div className="flex flex-col">
+                <p className="text-xs font-mono text-muted-foreground mb-2">Socials</p>
+                <div className="flex items-center gap-4 mb-4">
+                  <a href="https://linkedin.com/in/yuvraj-tiwari-31ba1739a" target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="LinkedIn"><Linkedin size={20} /></a>
+                  <a href="mailto:yuvrajtiwari.work@gmail.com" className="social-icon" aria-label="Email"><Mail size={20} /></a>
+                  <a href="https://github.com/yuvrajtiwari-work" target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="GitHub"><Github size={20} /></a>
+                </div>
+                <a href="#contact" className="hero-btn hero-btn-primary">
+                  <Mail size={18} />
+                  Get In Touch
+                </a>
+              </div>
 
-            {/* Platforms */}
-            <p className="text-xs font-mono text-muted-foreground mb-2 opacity-0 animate-fade-up stagger-4">Platforms</p>
-            <div className="flex items-center gap-4 mb-6 opacity-0 animate-fade-up stagger-4">
-              <a href="https://www.kaggle.com/yuvrajwork" target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="Kaggle"><KaggleIcon size={20} /></a>
-              <a href="https://www.hackerrank.com/profile/yuvrajtiwari_wo1" target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="HackerRank"><HackerRankIcon size={20} /></a>
-              <a href="https://leetcode.com/u/Yuvraj_Tiwari_Work/" target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="LeetCode"><LeetCodeIcon size={20} /></a>
-            </div>
-
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row items-start gap-4 opacity-0 animate-fade-up stagger-5">
-              <a href="#contact" className="hero-btn hero-btn-primary">
-                <Mail size={18} />
-                Get In Touch
-              </a>
-              <a href="/Yuvraj_Resume_2026.pdf" download className="hero-btn hero-btn-outline">
-                <Download size={18} />
-                Download CV
-              </a>
+              {/* Platforms + Download CV */}
+              <div className="flex flex-col">
+                <p className="text-xs font-mono text-muted-foreground mb-2">Platforms</p>
+                <div className="flex items-center gap-4 mb-4">
+                  <a href="https://www.kaggle.com/yuvrajwork" target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="Kaggle"><KaggleIcon size={20} /></a>
+                  <a href="https://www.hackerrank.com/profile/yuvrajtiwari_wo1" target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="HackerRank"><HackerRankIcon size={20} /></a>
+                  <a href="https://leetcode.com/u/Yuvraj_Tiwari_Work/" target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="LeetCode"><LeetCodeIcon size={20} /></a>
+                </div>
+                <a href="/Yuvraj_Resume_2026.pdf" download className="hero-btn hero-btn-outline">
+                  <Download size={18} />
+                  Download CV
+                </a>
+              </div>
             </div>
           </div>
 
