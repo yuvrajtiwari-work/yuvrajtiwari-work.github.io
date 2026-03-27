@@ -3,15 +3,17 @@ import { Award } from "lucide-react";
 const activities = [
   {
     title: "Graphic Design Lead",
-    organization: "Club Kshitij",
+    organization: "Club Kshitij (Cultural Club)",
+    subtitle: "Associated with SGSITS, Indore",
     period: "Mar 2022 – Apr 2024 · 2 yrs 2 mos",
     category: "Arts and Culture",
   },
   {
     title: "Commander",
     organization: "NATIONAL CADET CORPS - India",
+    subtitle: "A Certificate",
     period: "Apr 2016 – Mar 2018 · 2 yrs",
-    category: "Volunteering",
+    category: "Govt. Youth Organisation",
   },
 ];
 
