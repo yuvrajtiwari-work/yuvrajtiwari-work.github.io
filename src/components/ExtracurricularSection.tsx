@@ -36,6 +36,7 @@ const ExtracurricularSection = () => {
                   <h3 className="font-semibold text-lg">{item.title}</h3>
                    <p className="text-sm text-muted-foreground">{item.organization}</p>
                    {item.subtitle && <p className="text-xs text-muted-foreground">{item.subtitle}</p>}
+                   {item.extra && <p className="text-xs text-muted-foreground">{item.extra}</p>}
                    <p className="text-xs text-muted-foreground mt-1">{item.period}</p>
                   <span className="inline-block mt-2 text-xs px-2 py-0.5 rounded-full bg-primary/10 text-primary">
                     {item.category}
