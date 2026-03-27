@@ -5,13 +5,15 @@ const activities = [
     title: "Graphic Design Lead",
     organization: "Club Kshitij",
     period: "Mar 2022 – Apr 2024 · 2 yrs 2 mos",
-    category: "Arts and Culture",
+    category: "Cultural Club",
+    associatedWith: "SGSITS, Indore",
   },
   {
     title: "Commander",
     organization: "NATIONAL CADET CORPS - India",
     period: "Apr 2016 – Mar 2018 · 2 yrs",
-    category: "Volunteering",
+    category: "Organisation",
+    associatedWith: "KV. NO.1 Indore",
   },
 ];
 
