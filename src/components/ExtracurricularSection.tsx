@@ -12,7 +12,7 @@ const activities = [
     title: "Commander",
     organization: "NATIONAL CADET CORPS - India",
     subtitle: "Associated with KV No.1, Indore",
-    extra: "A Certificate",
+    
     period: "Apr 2016 – Mar 2018 · 2 yrs",
     category: "Govt. Youth Organisation",
   },
